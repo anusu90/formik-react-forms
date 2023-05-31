@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen p-20">{children}</body>
+      <body className="h-screen p-20">
+        <div className="flex justify-end">
+          <Link href="/">Home</Link>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
